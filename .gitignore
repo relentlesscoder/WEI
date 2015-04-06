@@ -32,7 +32,6 @@ _sgbak
 *.vssscc
 *.tmp~
 [Ll]ogs*/
-Backup/
-Backup1/
-UpgradeLog.htm
-UpgradeLog2.htm
+Backup*/
+UpgradeLog*.XML
+UpgradeLog*.htm
