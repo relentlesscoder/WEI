@@ -1,0 +1,5 @@
+﻿@{
+    ViewBag.Title = "Article";
+}
+
+@{ Html.RenderAction("Article", "Article", new {id = (int)ViewBag.ArticleId}); }

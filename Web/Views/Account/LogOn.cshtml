@@ -1,0 +1,57 @@
+﻿@using WEI.Web.Models
+@model LogOnViewModel
+
+@{
+    Layout = "~/Views/Shared/_EmptyLayout.cshtml";
+    ViewBag.Title = "Login";
+}
+
+<script type="text/javascript" language="javascript">
+    document.body.style.backgroundColor = '#c0c0c0';
+</script>
+
+<div class="cms-login-container">
+    <div class="header">
+        <h2>Login to Wei's CMS</h2>
+    </div>
+    
+    <center>
+        @Html.ValidationSummary(true, "Login failed. Please try again.")
+    </center>
+    
+    @using(Html.BeginForm())
+    {
+        <div>
+            <fieldset>
+                <legend>Sign in to manage contents.</legend>
+                
+                <div class="cms-label">
+                    @Html.LabelFor(m => m.UserName)
+                </div>
+                <div class="cms-textbox">
+                    @Html.TextBoxFor(m => m.UserName)
+                    <div class="cms-validation">
+                        @Html.ValidationMessageFor(m => m.UserName)
+                    </div>
+                </div>
+                
+                <div class="cms-label">
+                    @Html.LabelFor(m => m.Password)
+                </div>
+                <div class="cms-textbox">
+                    @Html.PasswordFor(m => m.Password)
+                    <div class="cms-validation">
+                        @Html.ValidationMessageFor(m => m.Password)
+                    </div>
+                </div>
+                
+                <p>
+                    <input type="submit" value="Log In"/>
+                </p>
+            </fieldset>
+        </div>
+    }
+</div>
+
+
+
